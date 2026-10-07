@@ -18,6 +18,9 @@
   # Agente SPICE: clipboard compartilhado e resize da tela no console do Proxmox.
   services.spice-vdagentd.enable = true;
 
+  # Porta do RDP embutido do Plasma, pra acessar a VM pelo Remote Desktop do Windows.
+  networking.firewall.allowedTCPPorts = [ 3389 ];
+
   # Versao do NixOS em que ESTA instalacao nasceu. Nunca mude depois.
   system.stateVersion = "25.05";
 }
