@@ -1,17 +1,23 @@
-  { config, pkgs, ... }:
+{ config, pkgs, ... }:
 
-  {
-    imports = [ ./hardware-configuration.nix ];
+{
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules/desktop-kde.nix
+  ];
 
-    networking.hostName = "vm-teste";
+  networking.hostName = "vm-teste";
 
-    # Boot UEFI com systemd-boot. Menu de boot = rollback de qualquer geração.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+  # Boot UEFI com systemd-boot. Menu de boot = rollback de qualquer geracao.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-    # Agente que o Proxmox usa pra ver IP e desligar limpo. Só em VM.
-    services.qemuGuest.enable = true;
+  # Agente que o Proxmox usa pra ver IP e desligar limpo. So em VM.
+  services.qemuGuest.enable = true;
 
-    # Versão do NixOS em que ESTA instalação nasceu. Nunca mude depois.
-    system.stateVersion = "25.05";
-  }
+  # Agente SPICE: clipboard compartilhado e resize da tela no console do Proxmox.
+  services.spice-vdagentd.enable = true;
+
+  # Versao do NixOS em que ESTA instalacao nasceu. Nunca mude depois.
+  system.stateVersion = "25.05";
+}
