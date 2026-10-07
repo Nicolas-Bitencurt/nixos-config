@@ -26,4 +26,11 @@
     elisa
     khelpcenter
   ];
+
+  # O servidor RDP do Plasma (krdp) chama o comando "openssl" pra gerar
+  # o certificado TLS. Sem ele no PATH, o RDP nunca liga.
+  environment.systemPackages = with pkgs; [
+    openssl
+  ];
 }
+
