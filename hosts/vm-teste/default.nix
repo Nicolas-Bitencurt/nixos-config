@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/desktop-kde.nix
+    ../../modules/apps-sistema.nix   # unfree, Steam, Tailscale
   ];
 
   networking.hostName = "vm-teste";
