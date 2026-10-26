@@ -13,7 +13,9 @@
     # em vez de clicar nas Configuracoes do Sistema em cada maquina.
     # "follows" faz ele usar o MESMO nixpkgs e home-manager que o resto do flake.
     plasma-manager = {
-      url = "github:nix-community/plasma-manager";
+      # Fixado num commit de set/2025: versoes mais novas so funcionam com
+      # Plasma 6.4+ e ignoram systemTray.items no 6.3 (plasma-manager issue 535).
+      url = "github:nix-community/plasma-manager/6a7d78cebd9a0f84a508bec9bc47ac504c5f51f4";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
