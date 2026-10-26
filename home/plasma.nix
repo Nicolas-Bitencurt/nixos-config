@@ -33,24 +33,45 @@
             };
           }
 
-          # Barra de tarefas so com icones, com os fixados da esquerda pra direita.
+          # Barra de tarefas so com icones. Ordem dos fixados, da esquerda pra direita.
           {
             iconTasks = {
               launchers = [
                 "applications:org.kde.dolphin.desktop"
-                "applications:org.kde.konsole.desktop"
                 "applications:brave-browser.desktop"
                 "applications:code.desktop"
+                "applications:org.kde.konsole.desktop"
                 "applications:spotify.desktop"
-                "applications:systemsettings.desktop"
+                "applications:steam.desktop"
               ];
             };
           }
 
           "org.kde.plasma.marginsseparator"
 
-          # Bandeja do sistema (rede, som, area de transferencia, etc.).
-          "org.kde.plasma.systemtray"
+          # Bandeja do sistema. "shown" fica sempre visivel; "hidden" vai pra
+          # setinha. Os ids sao os mesmos de extraItems no appletsrc.
+          {
+            systemTray.items = {
+              shown = [
+                "org.kde.plasma.volume"
+                "org.kde.plasma.networkmanagement"
+              ];
+              hidden = [
+                "org.kde.plasma.clipboard"
+                "org.kde.plasma.brightness"
+                "org.kde.kscreen"
+                "org.kde.plasma.keyboardlayout"
+                "org.kde.plasma.keyboardindicator"
+                "org.kde.plasma.manage-inputmethod"
+                "org.kde.plasma.cameraindicator"
+                "org.kde.plasma.mediacontroller"
+                "org.kde.plasma.devicenotifier"
+                "org.kde.plasma.notifications"
+                "org.kde.plasma.battery"
+              ];
+            };
+          }
 
           {
             digitalClock = {
