@@ -12,6 +12,7 @@
       # Configuracoes > Cores e Temas, basta trocar quando quiser.
       lookAndFeel = "org.kde.breezedark.desktop";
       clickItemTo = "open";   # um clique abre (como no Windows), dois nao
+      wallpaper = ../wallpapers/fundo.jpg;   # papel de parede, mesmo da tela de login
     };
 
     panels = [
@@ -27,7 +28,7 @@
           # Menu de aplicativos, estilo Windows (busca, favoritos, botao de desligar).
           {
             kickoff = {
-              icon = "start-here-kde-symbolic";
+              icon = "nix-snowflake-white";
               sortAlphabetically = true;
               showButtonsFor = "powerAndSession";
             };

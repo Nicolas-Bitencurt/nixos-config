@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../../modules/desktop-kde.nix
     ../../modules/apps-sistema.nix   # unfree, Steam, Tailscale
+    ../../modules/branding.nix       # tela de login com nosso fundo
   ];
 
   networking.hostName = "vm-teste";
