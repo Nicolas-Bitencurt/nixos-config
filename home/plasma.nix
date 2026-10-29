@@ -28,7 +28,7 @@
           # Menu de aplicativos, estilo Windows (busca, favoritos, botao de desligar).
           {
             kickoff = {
-              icon = "nix-snowflake-white";
+              icon = "${../branding/logo.svg}";   # logo da distro (caminho na store)
               sortAlphabetically = true;
               showButtonsFor = "powerAndSession";
             };

@@ -3,6 +3,7 @@
 {
   imports = [
     ./plasma.nix   # visual e atalhos do KDE
+    ./splash.nix   # tela de carregamento com o logo
   ];
 
   home.username = "nicolas";

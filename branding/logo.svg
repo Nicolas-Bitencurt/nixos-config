@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Logo PROVISORIO: hexagono com uma montanha dentro, tracos brancos,
+       fundo transparente. Troque este arquivo pelo logo real (mesmo nome)
+       e rode o rebuild: menu, avatar e splash atualizam juntos. -->
+  <g fill="none" stroke="#ffffff" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">
+    <polygon points="128,20 222,74 222,182 128,236 34,182 34,74"/>
+    <polyline points="80,164 128,76 176,164"/>
+    <line x1="104" y1="164" x2="152" y2="164"/>
+  </g>
+</svg>

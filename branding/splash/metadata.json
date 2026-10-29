@@ -1,0 +1,10 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Id": "br.nicolas.distro.splash",
+    "Name": "Splash da distro",
+    "Description": "Tela de carregamento com o logo da distro",
+    "Version": "1",
+    "Authors": [ { "Name": "Nicolas Bitencurt" } ]
+  }
+}
